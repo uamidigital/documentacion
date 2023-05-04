@@ -23,7 +23,7 @@ El proyecto se desarrollará utilizando las siguientes tecnologías:
 
 ## 🤝 Contribución
 
-Si te interesa contribuir al proyecto, puedes seguir los siguientes pasos:
+Para contribuir, puedes seguir los siguientes pasos:
 
 1. Realiza un fork del repositorio.
 2. Clona el repositorio en tu máquina local.
@@ -40,4 +40,4 @@ Este proyecto se encuentra bajo la licencia MIT. Puedes ver el archivo de licenc
 
 ---
 
-¡Gracias por considerar contribuir al proyecto! Esperamos que encuentres útil y valioso este sistema de gestión de obras para la universidad. Si tienes preguntas o sugerencias, por favor no dudes en contactarnos a través de [correo electrónico](mailto:uamidigital@xanum.uam.mx) o [creando un issue](https://github.com/uamidigital/documentacion/issues). ¡Estamos felices de recibir cualquier tipo de ayuda!
+¡Gracias por leer esta guía rápida! Esperamos que encuentres útil y valioso este sistema de gestión de obras para la universidad. Si tienes preguntas o sugerencias, por favor no dudes en contactarnos a través de [correo electrónico](mailto:uamidigital@xanum.uam.mx) o [creando un issue](https://github.com/uamidigital/documentacion/issues). ¡Estamos felices de finalizar este proyecto tan importante!
