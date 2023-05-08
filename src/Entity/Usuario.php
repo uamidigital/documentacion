@@ -36,6 +36,9 @@ class Usuario
     #[ORM\OneToMany(mappedBy: 'user_id', targetEntity: Version::class)]
     private Collection $versions;
 
+    #[ORM\Column]
+    private array $roles = [];
+
     public function __construct()
     {
         $this->documentacions = new ArrayCollection();
@@ -163,6 +166,18 @@ class Usuario
                 $version->setUserId(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getRoles(): array
+    {
+        return $this->roles;
+    }
+
+    public function setRoles(array $roles): self
+    {
+        $this->roles = $roles;
 
         return $this;
     }
