@@ -27,17 +27,15 @@ class Usuario
     #[ORM\Column(length: 255)]
     private ?string $password = null;
 
-    #[ORM\Column(length: 255)]
-    private ?string $rol = null;
-
     #[ORM\OneToMany(mappedBy: 'user_id', targetEntity: Documentacion::class)]
     private Collection $documentacions;
 
     #[ORM\OneToMany(mappedBy: 'user_id', targetEntity: Version::class)]
     private Collection $versions;
 
-    #[ORM\Column]
+    #[ORM\Column(nullable: true)]
     private array $roles = [];
+
 
     public function __construct()
     {
@@ -94,18 +92,6 @@ class Usuario
     public function setPassword(string $password): self
     {
         $this->password = $password;
-
-        return $this;
-    }
-
-    public function getRol(): ?string
-    {
-        return $this->rol;
-    }
-
-    public function setRol(string $rol): self
-    {
-        $this->rol = $rol;
 
         return $this;
     }
