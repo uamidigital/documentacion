@@ -1,0 +1,3 @@
+subir_archivo:
+  path: /archivo/subir
+  controller: App\Controller\ArchivoController::subirArchivo
