@@ -25,9 +25,9 @@ class Division
     #[ORM\OneToMany(mappedBy: 'division_id', targetEntity: Departamento::class)]
     private Collection $departamentos;
 
-    public function __construct()
-    {
-        $this->departamentos = new ArrayCollection();
+    public function __construct($nombre = null, $descripcion){
+        $this->nombre = $nombre;
+        $this->descripcion = $descripcion;
     }
 
     public function getId(): ?int

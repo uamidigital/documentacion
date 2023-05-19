@@ -39,6 +39,17 @@ class DepartamentoRepository extends ServiceEntityRepository
         }
     }
 
+    public function findDepartamento($id){
+        return $this->getEntityManager()
+            ->createQuery('
+            SELECT departamento.id, departamento.nombre,departamento.descripcion
+            FROM App:Departamento departamento
+            WHERE departamento.id =:id
+            ')
+            ->setParameter('id',$id)
+            ->getResult();
+    }
+
 //    /**
 //     * @return Departamento[] Returns an array of Departamento objects
 //     */

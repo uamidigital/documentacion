@@ -24,6 +24,12 @@ class Departamento
     #[ORM\JoinColumn(nullable: false)]
     private ?Division $division_id = null;
 
+    public function __construct($nombre = null, $descripcion = null, $division_id = null){
+        $this->nombre = $nombre;
+        $this->descripcion = $descripcion;
+        $this->division_id = $division_id;
+    }
+
     public function getId(): ?int
     {
         return $this->id;
