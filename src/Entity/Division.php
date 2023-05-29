@@ -25,7 +25,15 @@ class Division
     #[ORM\OneToMany(mappedBy: 'division_id', targetEntity: Departamento::class)]
     private Collection $departamentos;
 
-    public function __construct($nombre = null, $descripcion){
+    public function serialize(){
+        return [
+            'id'=>$this->id,
+            'nombre'=>$this->nombre,
+            'descripcion'=>$this->descripcion,
+        ];
+    }
+
+    public function __construct($nombre = null, $descripcion = null){
         $this->nombre = $nombre;
         $this->descripcion = $descripcion;
     }

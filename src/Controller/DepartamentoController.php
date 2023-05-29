@@ -25,9 +25,15 @@ class DepartamentoController extends AbstractController
 
     #[Route('/departamento/insertar', name: 'insertar_departamento')]
     public function insert(Request $request) {
-        $nombre = $request->request->get('nombre');
-        $descripcion = $request->request->get('descripcion');
-        $division_id = $request->request->get('division_id');
+        $data = json_decode($request->getContent(), true);
+
+        $nombre = $data['nombre'] ?? null;
+        $descripcion = $data['descripcion'] ?? null;
+        $division = $data['division_id'] ?? null;
+
+        if ($nombre == null || $descripcion === null || $division===null){
+            return new JsonResponse(['error' => 'Invalid JSON payload'], 400);
+        }
     
         $division = $this->em->getRepository(Division::class)->find($division_id);
         $departamento = new Departamento(nombre: $nombre, descripcion: $descripcion, division_id: $division);
