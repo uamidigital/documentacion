@@ -56,6 +56,7 @@ class DivisionController extends AbstractController
         return new JsonResponse(['division' => $division->serialize()]); 
     }
 
+
     #[Route('/division', name: 'obtener_division_todas', methods: ['GET'])]
     public function showAll(){
         $divisions = $this->em->getRepository(Division::class)->findAll();

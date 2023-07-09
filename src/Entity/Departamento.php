@@ -29,6 +29,7 @@ class Departamento
             'id'=>$this->id,
             'nombre'=>$this->nombre,
             'descripcion'=>$this->descripcion,
+            'division'=>$this->division_id
         ];
     }
 
